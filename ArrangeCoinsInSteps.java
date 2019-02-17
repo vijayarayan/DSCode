@@ -51,3 +51,19 @@ class Solution {
       return currentCount;  
     }
 }
+
+/********************************************/
+  *Second Approach with while loop ( little simpler)
+  *****************************************/
+
+class Solution {
+    public int arrangeCoins(int n) {
+        int stepNumber = 0;
+        while (n>=0) {
+            stepNumber = stepNumber + 1;
+            n = n - stepNumber;
+        }
+        
+        return stepNumber - 1;
+    }
+}
